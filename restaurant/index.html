@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Our Restaurant!</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link href='http://fonts.googleapis.com/css?family=Gloria+Hallelujah' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Lato:300,400,700' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular.min.js"></script>
+</head>
+<body ng-app="MenuApp">
+<div class="return">
+	<a href="../index.html#work">return</a>
+</div>
+	<div class="top">
+		<div class="container">
+			<ul class="nav">
+				<li><a href="index.html">home</a></li>
+				<li><a href="index.html#about">about us</a></li>
+				<li><a href="index.html#menu">menu</a></li>
+				<li><a href="gallery.html">gallery</a></li>
+				<li><a href="blog.html">blog</a></li>
+				<li><a href="#">reservations</a></li>
+				<li><a href="#">contact</a></li>
+			</ul>
+		</div>
+	</div>
+
+	<div class="btncon"><span aria-hidden="true" class="btn">&nbsp;</span></div>
+	<div class="mobile hidden">
+		<div class="cont">
+			<ul class="nav">
+				<li><a href="#">home</a></li>
+				<li><a href="#about">about us</a></li>
+				<li><a href="#menu">menu</a></li>
+				<li><a href="gallery.html">gallery</a></li>
+				<li><a href="blog.html">blog</a></li>
+				<li><a href="#">reservations</a></li>
+				<li><a href="#">contact</a></li>
+			</ul>
+		</div>
+	</div>
+
+	<div class="jumbotron one">
+		<div class="jumbotron overlay">
+			<div class="container">
+				<img src="img/logo.png">
+				<h1>the best food</h1>
+				<h2>with the best ingredients</h2>
+			</div>
+		</div>
+	</div>
+
+	<div class="welabout">
+		<div class="container">
+			<div class="welcome">
+				<div class="span_1">
+					<div class="vc">
+						<h3>Welcome</h3>
+						<h4>to our restaurant!</h4>
+						<p>Lorem ipsum dolor sit amet conse ctetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+					</div>
+				</div>
+				<div class="span_3"></div>
+			</div>
+			<div class="about">
+			<a name="about"></a>
+				<div class="abt">
+					<div class="vc blah">
+						<h3>About</h3>
+						<h4>our restaurant</h4>
+						<p>Lorem ipsum dolor sit amet conse ctetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="jumbotron two">
+		<div class="jumbotron overlay">
+			<div class="container blah">
+				<h1>Experience</h1>
+				<h2>the taste!</h2>
+				<p>Lorem ipsum dolor sit amet conse ctetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehender.</p>
+			</div>
+		</div>
+	</div>
+	<a name="menu"></a>
+	<div class="menu" ng-controller="MainController">
+		<div class="cont">
+			<div class="spacer"></div>
+			<h1>Menu</h1>
+			<div class="spacer"></div>
+			<div class="spacer"></div>
+			<div class="img ava1"></div>
+			<div class="spacer"></div>
+			<h5 class="mt">Prime steaks</h5>
+			<div class="spacer"></div>
+		</div>
+			<div class="col">
+				<div class="item" ng-repeat="steak in steaks">
+					<h2 class="title">{{ steak.name }}</h2>
+					<h5 class="price">{{ steak.price | currency }}</h5>
+					<p class="desc">{{ steak.description }}</p>
+				</div>
+			</div>
+		<div class="cont">
+			<div class="spacer"></div>
+			<div class="spacer"></div>
+			<div class="img ava2"></div>
+			<div class="spacer"></div>
+			<h5 class="mt">soups & salads</h5>
+			<div class="spacer"></div>
+		</div>
+			<div class="col">
+				<div class="item" ng-repeat="side in sides">
+					<h2 class="title">{{ side.name }}</h2>
+					<h5 class="price">{{ side.price | currency }}</h5>
+					<p class="desc">{{ side.description}}</p>
+				</div>
+			</div>
+		<div class="cont">
+			<div class="spacer"></div>
+			<div class="spacer"></div>
+			<div class="img ava3"></div>
+			<div class="spacer"></div>
+			<h5 class="mt">drinks</h5>
+			<div class="spacer"></div>
+		</div>
+			<div class="col">
+				<div class="item" ng-repeat="drink in drinks">
+					<h2 class="title">{{ drink.name }}</h2>
+					<h5 class="price">{{ drink.price | currency }}</h5>
+					<p class="desc">{{ drink.description }}</p>
+				</div>
+			</div>
+	</div>
+
+	<footer>
+		<div class="container">
+			<div class="txtbx">
+				<a href="https://www.google.com/maps/place/123+Mockingjay+ln,+yourcity,+st+90210/" target="_blank">123 Mockingjay Ln.</a><br>
+				<a href="https://www.google.com/maps/place/123+Mockingjay+ln,+yourcity,+st+90210/" target="_blank">YourCity, ST 90210</a><br>
+				<a href="#">123-456-7890</a>
+			</div>
+			<div class="txtbx2">
+				<span>site by <a href="../index.html">akula designs</a></span>
+			</div>
+		</div>
+	</footer>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+	<script src="js/app.js"></script>
+	<script type="text/javascript" src="js/photoswipe.js"></script>
+	<!-- Modules -->
+    <script src="js/menuApp.js"></script>
+
+    <!-- Controllers -->
+    <script src="js/MainController.js"></script>
+</body>
+</html>
